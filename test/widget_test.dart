@@ -6,7 +6,7 @@ import 'package:lab15/main.dart';
 
 void main() {
   group('FunctionCalculator', () {
-    test('calculates y = (x^2 + x) - 100 correctly', () {
+    test('calculates y = x/(x^2 - 4)correctly', () {
       final calculator = FunctionCalculator();
       expect(calculator.calculateFunction(0), -100);
       expect(calculator.calculateFunction(10), 10);
@@ -31,7 +31,7 @@ void main() {
       expect(fab, findsOneWidget);
 
       final fabIcon = find.descendant(of: fab, matching: find.byIcon(Icons.pets));
-      expect(fabIcon, findsOneWidget); // Перевірка на іконку для варіанту 23
+      expect(fabIcon, findsOneWidget); // Перевірка на іконку для варіанту 21
     });
 
     testWidgets('should display the result of calculation', (WidgetTester tester) async {
