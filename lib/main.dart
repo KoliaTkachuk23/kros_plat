@@ -55,13 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text('Enter value for x:'),
             Slider(
-              min: -50,
-              max: 50,
-              divisions: 20, // Кількість поділів: (50 - (-50)) / 5 = 20
+              min: -70,
+              max: 70,
+              divisions: 20, 
               value: _xValue,
               onChanged: (double value) {
                 setState(() {
-                  _xValue = (value / 5).roundToDouble() * 5; // Округлення до найближчого кроку
+                  _xValue = (value / 7).roundToDouble() * 7; // Округлення до найближчого кроку
                 });
               },
             ),
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _calculateResult,
         tooltip: 'Calculate',
-        child: const Icon(Icons.pets), // Іконка для варіанту 23
+        child: const Icon(Icons.pets), // Іконка для варіанту 21
       ),
     );
   }
